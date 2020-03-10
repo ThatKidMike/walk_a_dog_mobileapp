@@ -32,7 +32,7 @@ class DogsOverviewScreen extends StatelessWidget {
         name: 'dog4',
         phoneNumber: '123 123 123',
         imageUrl:
-            'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.uGoiZJ5X4im84ERYpFFKDQHaHa%26pid%3DApi&f=1',
+            'https://www.thesprucepets.com/thmb/8TWtyJq0RXAlWoJKu62mm4dlYdI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/portrait-if-a-spitz-pomeranian_t20_v3o29E-5ae9bbdca18d9e0037d95983.jpg',
         address: 'Kartezjusza 1C, Warszawa'),
     Dog(
         id: 'd5',

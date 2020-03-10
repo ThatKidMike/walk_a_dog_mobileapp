@@ -16,17 +16,19 @@ class DogsList extends StatelessWidget {
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(35),
-                child: CachedNetworkImage(
+              leading: CachedNetworkImage(
+                  //or CachedNetworkImageProvider maybe...
                   imageUrl: _loadedDogs[index].imageUrl,
                   placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Image(
-                    image: AssetImage('lib/assets/no_image_dog.png'),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
+                  errorWidget: (context, url, error) => CircleAvatar(
+                        backgroundImage:
+                            AssetImage('lib/assets/no_image_dog.gif'),
+                        radius: 25,
+                      ),
+                  imageBuilder: (context, imageProvider) => CircleAvatar(
+                        backgroundImage: imageProvider,
+                        radius: 25,
+                      )),
               title: Text(_loadedDogs[index].name),
               subtitle: Text(_loadedDogs[index].phoneNumber),
               trailing: IconButton(
