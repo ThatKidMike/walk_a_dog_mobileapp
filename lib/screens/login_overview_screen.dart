@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:walk_a_dog/widgets/login_logo.dart';
+import 'package:walk_a_dog/widgets/sign_in_fields.dart';
 
 class LoginOverviewScreen extends StatelessWidget {
   @override
@@ -7,16 +9,14 @@ class LoginOverviewScreen extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('Login screen overview'),
       ),
-      body: new Hero(
-        tag: 'hero',
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-          child: CircleAvatar(
-            backgroundColor: Colors.transparent,
-            radius: 150.0,
-            child: Image.asset('lib/assets/jumping_dog_logo.gif'),
-          ),
-        ),
+      body: new Form(
+        child: new ListView(shrinkWrap: true, children: [
+          loginLogo(),
+          emailInput(),
+          passwordInput(),
+          proceedButton(context),
+          registerButton(),
+        ]),
       ),
     );
   }

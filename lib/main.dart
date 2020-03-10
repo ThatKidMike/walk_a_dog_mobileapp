@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.green[350],
         fontFamily: 'JosefinSans',
       ),
-      home: MyHomePage(),
+      home: LoginOverviewScreen()//MyHomePage(),
     );
   }
 }
