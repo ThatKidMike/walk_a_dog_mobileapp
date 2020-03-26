@@ -45,6 +45,7 @@ flutter:
   assets:
    - lib/assets/no_image_dog.gif
    - lib/assets/jumping_dog_logo.gif
+   - lib/assets/talking_dog_logo.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

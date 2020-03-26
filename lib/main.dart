@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:walk_a_dog/screens/login_overview_screen.dart';
+import 'package:walk_a_dog/screens/register_overview_screen.dart';
 
 import 'icons/dogs_bar_icons.dart';
 import 'screens/dogs_overview_screen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.green[350],
         fontFamily: 'JosefinSans',
       ),
-      home: LoginOverviewScreen()//MyHomePage(),
+      home: RegisterOverviewScreen()//LoginOverviewScreen()//MyHomePage(),
     );
   }
 }

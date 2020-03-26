@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget loginLogo() {
+Widget dogLogo(var path) {
   return new Hero(
     tag: 'hero',
     child: Padding(
@@ -8,7 +8,7 @@ Widget loginLogo() {
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 150.0,
-        child: Image.asset('lib/assets/jumping_dog_logo.gif'),
+        child: Image.asset(path),
       ),
     ),
   );

@@ -20,7 +20,7 @@ Widget emailInput() {
   );
 }
 
-Widget passwordInput() {
+Widget passwordInput(var hintText) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
     child: new TextFormField(
@@ -28,7 +28,7 @@ Widget passwordInput() {
       obscureText: true,
       autofocus: false,
       decoration: new InputDecoration(
-          hintText: 'Password',
+          hintText: hintText,
           icon: new Icon(
             Icons.lock,
             color: Colors.grey,
