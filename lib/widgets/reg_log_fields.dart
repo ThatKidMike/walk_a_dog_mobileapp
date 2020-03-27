@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:walk_a_dog/screens/register_overview_screen.dart';
 
 Widget emailInput() {
   return Padding(
@@ -20,6 +21,26 @@ Widget emailInput() {
   );
 }
 
+Widget nameInput() {
+  return Padding(
+    padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
+    child: new TextFormField(
+      maxLines: 1,
+      keyboardType: TextInputType.emailAddress,
+      autofocus: false,
+      decoration: new InputDecoration(
+          hintText: 'Name',
+          icon: new Icon(
+            Icons.contacts,
+            color: Colors.grey,
+          )),
+      validator: (value) =>
+          value.isEmpty ? 'Name field can\'t be empty' : null,
+      //onSave must be trim to avoid whitespaces
+    ),
+  );
+}
+
 Widget passwordInput(var hintText) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0.0),
@@ -34,7 +55,7 @@ Widget passwordInput(var hintText) {
             color: Colors.grey,
           )),
       validator: (value) =>
-          value.isEmpty ? 'Password field can\'t be empty' : null,
+          value.isEmpty ? '$hintText field can\'t be empty' : null,
       //onSave must be trim to avoid whitespaces
     ),
   );
@@ -52,7 +73,7 @@ Widget proceedButton(BuildContext context) {
   );
 }
 
-Widget registerButton() {
+Widget registerButton(BuildContext context) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
     child: FlatButton(
@@ -63,7 +84,12 @@ Widget registerButton() {
           color: Colors.grey,
         ),
       ),
-      onPressed: () => {},
+      onPressed: () => {_navigateToRegister(context)},
     ),
   );
+}
+
+void _navigateToRegister(BuildContext context) {
+  Navigator.of(context).pushNamed(RegisterOverviewScreen.routeName);
+  //pushNamed has 'arguments' parameter to pass data
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:walk_a_dog/screens/register_overview_screen.dart';
 import 'package:walk_a_dog/widgets/dog_logo.dart';
 import 'package:walk_a_dog/widgets/reg_log_fields.dart';
 
 class LoginOverviewScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -15,7 +17,7 @@ class LoginOverviewScreen extends StatelessWidget {
           emailInput(),
           passwordInput('Password'),
           proceedButton(context),
-          registerButton(),
+          registerButton(context),
         ]),
       ),
     );

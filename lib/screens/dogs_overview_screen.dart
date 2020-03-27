@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:walk_a_dog/widgets/add_a_walk_modal_bottom.dart';
 import 'package:walk_a_dog/widgets/dogs_list.dart';
 
 import '../models/dog.dart';
@@ -48,7 +49,7 @@ class DogsOverviewScreen extends StatelessWidget {
       body: DogsList(this.loadedDogs),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // Add your onPressed code here!
+          addAWalkModalBottom(context);
         },
         label: Text('Add a Walk'),
         icon: Icon(Icons.add),

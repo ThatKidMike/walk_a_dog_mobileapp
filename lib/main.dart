@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.green[350],
         fontFamily: 'JosefinSans',
       ),
-      home: RegisterOverviewScreen()//LoginOverviewScreen()//MyHomePage(),
+      home: MyHomePage(),//LoginOverviewScreen(), //RegisterOverviewScreen()
+      routes: {
+        RegisterOverviewScreen.routeName: (context) => RegisterOverviewScreen(),
+      },
     );
   }
 }
