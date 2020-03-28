@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import '../models/dog.dart';
 
-class Dogs with ChangeNotifier {
+class Walks with ChangeNotifier {
   List<Dog> _loadedDogs = [
     //placeholder list - it will be accessed from the backend
     Dog(
@@ -46,7 +46,15 @@ class Dogs with ChangeNotifier {
   }
 
   void addDog() {
-    //_loadedDogs.add();
+    _loadedDogs.add(
+      Dog(
+          id: 'd6',
+          name: 'dog6',
+          phoneNumber: '123 123 123',
+          imageUrl: 'placeholder',
+          address: 'Kartezjusza 1C, Warszawa'),
+    );
+    //testing notifying...
     notifyListeners();
   }
 }

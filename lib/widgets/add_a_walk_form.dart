@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:walk_a_dog/providers/walks.dart';
 
 Form addAWalkForm(BuildContext context, GlobalKey<FormState> formKey) {
   return new Form(
@@ -69,15 +71,10 @@ Widget _acceptButton(context, GlobalKey<FormState> formKey) {
     child: IconButton(
       icon: Icon(Icons.check),
       color: Colors.green,
-      onPressed: () => {
-        if (formKey.currentState.validate())
-          {
-            Scaffold.of(context).showSnackBar(
-              SnackBar(
-                content: Text('Processing Data'),
-              ),
-            )
-          }
+      onPressed: () {
+        if (formKey.currentState.validate()) {
+          Navigator.of(context).pop();
+        }
       },
       iconSize: 40.0,
     ),
