@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "345088089049",
+    "firebase_url": "https://walkadog-b114c.firebaseio.com",
+    "project_id": "walkadog-b114c",
+    "storage_bucket": "walkadog-b114c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345088089049:android:c72cf81208e98e371197c8",
+        "android_client_info": {
+          "package_name": "com.thatkidmike.walk_a_dog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345088089049-2f8u6g1q9aj1rb77ipvdeuc6j9v2pe8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWYGq2ryAtlgyv_LkI7CGkqNcJPvlMOR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345088089049-2f8u6g1q9aj1rb77ipvdeuc6j9v2pe8f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

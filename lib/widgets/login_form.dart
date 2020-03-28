@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:walk_a_dog/services/field_validators.dart';
+import 'package:walk_a_dog/helpers/fields_validators.dart';
 import 'package:walk_a_dog/widgets/dog_logo.dart';
 
 Form loginForm(BuildContext context, GlobalKey<FormState> formKey) {

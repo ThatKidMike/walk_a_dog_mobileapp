@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:walk_a_dog/screens/add_a_walk_modal_bottom.dart';
-import 'package:walk_a_dog/widgets/dogs_list.dart';
+import 'package:flutter/widgets.dart';
 
 import '../models/dog.dart';
 
-class DogsOverviewScreen extends StatelessWidget {
-  final List<Dog> loadedDogs = [
+class Dogs with ChangeNotifier {
+  List<Dog> _loadedDogs = [
     //placeholder list - it will be accessed from the backend
     Dog(
         id: 'd1',
@@ -43,17 +41,12 @@ class DogsOverviewScreen extends StatelessWidget {
         address: 'Kartezjusza 1C, Warszawa'),
   ];
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: DogsList(this.loadedDogs),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          addAWalkModalBottom(context);
-        },
-        label: Text('Add a Walk'),
-        icon: Icon(Icons.add),
-      ),
-    );
+  List<Dog> get items {
+    return [..._loadedDogs];
+  }
+
+  void addDog() {
+    //_loadedDogs.add();
+    notifyListeners();
   }
 }
