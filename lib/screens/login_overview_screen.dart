@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:walk_a_dog/screens/register_overview_screen.dart';
-import 'package:walk_a_dog/widgets/dog_logo.dart';
-import 'package:walk_a_dog/widgets/reg_log_fields.dart';
+import 'package:walk_a_dog/widgets/login_form.dart';
+import 'package:walk_a_dog/widgets/register_button_navigate.dart';
 
 class LoginOverviewScreen extends StatelessWidget {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +11,10 @@ class LoginOverviewScreen extends StatelessWidget {
       appBar: new AppBar(
         title: new Text('Sign in'),
       ),
-      body: new Form(
-        child: new ListView(shrinkWrap: true, children: [
-          dogLogo('lib/assets/jumping_dog_logo.gif'),
-          emailInput(),
-          passwordInput('Password'),
-          proceedButton(context),
-          registerButton(context),
-        ]),
-      ),
+      body: new ListView(children: [
+        loginForm(context, _formKey),
+        registerButtonNavigate(context),
+      ]),
     );
   }
 }
