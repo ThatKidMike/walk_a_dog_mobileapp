@@ -10,7 +10,7 @@ Future addAWalkModalBottom(context) {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          addAWalkForm(context, _formKey),
+          AddAWalkForm(_formKey),
         ],
       );
     },

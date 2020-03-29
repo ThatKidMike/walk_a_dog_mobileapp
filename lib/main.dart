@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:walk_a_dog/screens/login_overview_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:walk_a_dog/providers/walks.dart';
 import 'package:walk_a_dog/screens/register_overview_screen.dart';
 
 import 'icons/dogs_bar_icons.dart';
@@ -10,17 +11,21 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.green[350],
-        fontFamily: 'JosefinSans',
+    return ChangeNotifierProvider(
+      create: (context) => Walks(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.green,
+          accentColor: Colors.green[350],
+          fontFamily: 'JosefinSans',
+        ),
+        home: MyHomePage(), //LoginOverviewScreen(), //RegisterOverviewScreen()
+        routes: {
+          RegisterOverviewScreen.routeName: (context) =>
+              RegisterOverviewScreen(),
+        },
       ),
-      home: MyHomePage(), //LoginOverviewScreen(), //RegisterOverviewScreen()
-      routes: {
-        RegisterOverviewScreen.routeName: (context) => RegisterOverviewScreen(),
-      },
     );
   }
 }
